@@ -1,0 +1,45 @@
+extends ../_layoutBlog
+
+block title
+    - var title = "Авторизация"
+
+
+block content
+    .wrapper
+        .maincontent
+            .block__login
+                .login-bg__img
+                    img.login-bg__pic(src="assets/img/header/mountains_bg.png")
+
+                include ../components/header
+
+                .login-form
+                    form.autorized__form(method='post' action='')
+                        .login-form__container
+                            .title.login-form__title авторизуйтесь
+                            .login-input__group
+                                label(for='login')
+                                    .login-input__img
+                                        img.login-input__pic(src='assets/img/icons/login.svg')
+                                input.login-input(id='login' type='text' placeholder='Логин' required)
+                            .login-input__group
+                                label(for='password')
+                                    .login-input__img
+                                        img.login-input__pic(src='assets/img/icons/password.svg')
+                                input.login-input(id='password' type='text' placeholder='Пароль' required)
+                            .login-input__group-check
+                                input.login-input__check(id='check' type='checkbox' name='check')
+                                label(for='check') Я человек
+                            .login-input__group-radio
+                                p Вы точно не робот ?
+                                label Да
+                                    input(type='radio' name='radio' checked )
+                                label Нет
+                                    input(type='radio' name='radio')
+                        .login-buttons
+                            button.login-form__button.form__button_send(type='submit') Отправить
+                            button.login-form__button.form__button_clear(type='reset') Очистить
+
+
+                .bottom-text
+                    p &copy; Лузан Андрей | Создано с любовью в Loftschool | 2016

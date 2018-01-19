@@ -1,0 +1,108 @@
+extends ../_layoutBlog
+
+block title
+    - var title = "Мои работы"
+
+
+block content
+    .wrapper
+        .maincontent
+            .header-blog
+                .header-blog__bg
+                    img.header-blog__bg-pic(src="assets/img/header/mountains_bg.png")
+                .header__portfolio-img
+                    img.header__portfolio-img_pic(src="assets/img/blog/blog_header.png")
+
+                .header-blog__up
+                    .socials
+                        ul.socials__list
+                            -
+                                icons = [
+                                ['vk', '//vk.com'],
+                                ['github', '//github.com'],
+                                ['in', '//linkedin.com']
+                                ]
+
+                            each icon in icons
+                                li.socials__item
+                                    a.socials__link(href=icon[1])
+                                        svg.socials__icon
+                                            use(xlink:href=`assets/img/sprite.svg#${icon[0]}`)
+
+                    .hamburger
+                        a.hamburger-pic(href="#")
+                            img.hamburger-pic(src="assets/img/icons/hamburger.svg")
+
+                section.section__hero
+                    .user__block
+                        .user__photo
+                            img.user__photo-pic(src="assets/img/header/avatar.jpg" alt="user photo")
+                        .title.blog-title блог
+                        .user__desc Статьи которые я написал
+
+
+            .section-blog
+                .triangles
+                    .triangle__left
+                        svg.works__triangle.works__triangle-left(viewBox="0 0 1000 110" preserveAspectRatio="none")
+                            polygon(points="0,0 0,110 1000,110")
+                    .triangle__right
+                        svg.works__triangle.works__triangle-right(viewBox="0 0 1000 110" preserveAspectRatio="none")
+                            polygon(points="0,110 1000,110 1000,0")
+                .content-blog
+                    nav.sidebar-blog
+                        ul.sidebar-blog__list
+                            li.sidebar-blog__item
+                                a.sidebar-blog__link(href='blog.html') Самое важное в Sass
+                            li.sidebar-blog__item
+                                a.sidebar-blog__link.sidebar-blog__link_active(href='#') Приемы в верстке без которых не обходится не один сайт
+                            li.sidebar-blog__item
+                                a.sidebar-blog__link(href='blog_page_3.html') Самый необходимый набор Gulp плагинов
+                            li.sidebar-blog__item
+                                a.sidebar-blog__link(href='blog_page_4.html') Почему я выбрал Pug
+                    .articles__container
+                        ul.articles__item
+                            li.article__item
+                                .title__article Самое важное в sass
+                                .article__date 22 ноября 2017
+                                .article__text SASS - это язык на основе CSS, предназначенный для упрощения файлов каскадных таблиц стилей.
+                                    |Таким образом, весь код мы пишем на языке SASS (он очень похож на обычный CSS),
+                                    |но при этом у него есть также целая куча дополнительных возможностей и фишек
+                                    |о которых мы даже мечтать не могли при использовании обычного CSS.
+                                    |За счет использования этих ноу-хау мы значительно упрощаем наш код, делаем его более поддерживаемым.
+                                    |Затем полученный SASS-код нам необходимо откомпилировать и на выходе получить привычный CSS,
+                                    |который как и по старинке, уже подключается к нашему сайту.
+                                    |По началу может показаться, что все это довольно сложно, но это не так.
+                                    |Вам всего лишь один раз нужно установить и настроить компилятор SASS
+                                    |на свой компьютер и далее он будет автоматически делать компиляцию без вашего вмешательства.
+
+                            li.article__item
+                                .title__article Самое важное в sass
+                                .article__date 22 ноября 2017
+                                .article__text SASS - это язык на основе CSS, предназначенный для упрощения файлов каскадных таблиц стилей.
+                                    | Таким образом, весь код мы пишем на языке SASS (он очень похож на обычный CSS),
+                                    | но при этом у него есть также целая куча дополнительных возможностей и фишек
+                                    | о которых мы даже мечтать не могли при использовании обычного CSS.
+                                    | За счет использования этих ноу-хау мы значительно упрощаем наш код, делаем его более поддерживаемым.
+                                    | Затем полученный SASS-код нам необходимо откомпилировать и на выходе получить привычный CSS,
+                                    | который как и по старинке, уже подключается к нашему сайту.
+                                    | По началу может показаться, что все это довольно сложно, но это не так.
+                                    | Вам всего лишь один раз нужно установить и настроить компилятор SASS
+                                    | на свой компьютер и далее он будет автоматически делать компиляцию без вашего вмешательства.
+
+                            li.article__item
+                                .title__article Самое важное в sass
+                                .article__date 22 ноября 2017
+                                .article__text SASS - это язык на основе CSS, предназначенный для упрощения файлов каскадных таблиц стилей.
+                                    | Таким образом, весь код мы пишем на языке SASS (он очень похож на обычный CSS),
+                                    | но при этом у него есть также целая куча дополнительных возможностей и фишек
+                                    | о которых мы даже мечтать не могли при использовании обычного CSS.
+                                    | За счет использования этих ноу-хау мы значительно упрощаем наш код, делаем его более поддерживаемым.
+                                    | Затем полученный SASS-код нам необходимо откомпилировать и на выходе получить привычный CSS,
+                                    | который как и по старинке, уже подключается к нашему сайту.
+                                    | По началу может показаться, что все это довольно сложно, но это не так.
+                                    | Вам всего лишь один раз нужно установить и настроить компилятор SASS
+                                    | на свой компьютер и далее он будет автоматически делать компиляцию без вашего вмешательства.
+
+                include ../components/footer
+

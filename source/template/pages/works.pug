@@ -1,0 +1,84 @@
+extends ../_layoutBlog
+
+block title
+    - var title = "Мои работы"
+
+
+block content
+
+            include ../components/header
+
+            .works
+                .block__title
+                    .triangles
+                        .triangle__left
+                            svg.works__triangle.works__triangle-left(viewBox="0 0 1000 110" preserveAspectRatio="none")
+                                polygon(points="0,0 0,110 1000,110")
+                        .triangle__right
+                            svg.works__triangle.works__triangle-right(viewBox="0 0 1000 110" preserveAspectRatio="none")
+                                polygon(points="0,110 1000,110 1000,0")
+                    .title.title__works Мои работы
+                        .works__img
+                            img.works__pic(src="assets/img/works/works_header.png")
+                .block__works
+                    .works__col.works__col-left
+                        .col__left-wrap
+                            .title.col__left-title Сайт школы онлайн образования
+                            .col__left-desc html, css, javascript
+                            a(href='#').button__works
+                                img.button__pic(src='assets/img/icons/link.svg')
+                                .button__name Посмотреть сайт
+                    .works__col.works__col-right
+                        .col-right__top
+                            .col-right__top_pic
+                        .col-right__bottom
+                            .col-right__bottom-left
+                            .col-right__bottom-right
+            .reviews__container
+                .block-reviews__title
+                    .title.reviews__title что обо мне говорят
+                        .about__img
+                            img.about__pic(src="assets/img/header/about_header.png")
+                .reviews
+                    .reviews__left
+                        .quotes__img
+                            img.quotes__pic(src="assets/img/works/11.png")
+                        .reviews__text Этот парень проходил обучение веб-разработке не где то,
+                                        | а в "Loftschool"! 2 месяца только самых тяжелых испытаний
+                                        | и бессонных ночей!
+                        .reviews__teacher
+                            img.reviews__teacher_pic(src='assets/img/works/photo1.png')
+                            .reviews__teacher_name
+                                .teacher__name Ковальчук Дмитрий
+                                .teacher__desc основатель LOFTSCHOOL
+                    .reviews__right
+                        .quotes__img
+                            img.quotes__pic(src="assets/img/works/11.png")
+                        .reviews__text Этот код выдержит любые испытания.Только пожалуйста,
+                                        | не загружайте этот сайт на слишком старых браузерах.
+                        .reviews__teacher
+                            img.reviews__teacher_pic(src='assets/img/works/photo2.png')
+                            .reviews__teacher_name
+                                .teacher__name Зар Захаров
+                                .teacher__desc преподаватель
+                .block-reviews__bg
+                    .reviews__bg
+                        img.reviews__bg-pic(src='assets/img/works/bg.png')
+                    .reviews__form
+                        form.form(method='post' action='')
+                            .form__container
+                                .title.form__title связаться со мной
+                                .input__group
+                                    input.form__input(name='name' placeholder='Имя' required)
+                                .input__group
+                                    input.form__input(name='mail' placeholder='Email' type='email' required)
+                                .input__group
+                                    textarea.form__input.form__input_area(name='subject' placeholder='Ваше сообщение' required)
+                            .works-buttons
+                                button.works-form__button.works-form__button_send(type='submit') Отправить
+                                button.works-form__button.works-form__button_clear(type='reset') Очистить
+
+
+            include ../components/footer
+
+

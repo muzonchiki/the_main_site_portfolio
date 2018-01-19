@@ -1,0 +1,33 @@
+footer.footer
+    .footer-top
+        .footer-top__left
+            nav.nav
+                ul.nav__list
+                    li.nav__item
+                        a.nav__link(href="works.html") Мои работы
+                    li.nav__item
+                        a.nav__link(href="about.html") Обо мне
+                    li.nav__item
+                        a.nav__link(href="blog.html") Блог
+                    li.nav__item
+                        a.nav__link(href="login.html") Авторизация
+        .footer-top__right
+            .socials
+                ul.socials__list
+                    -
+                        icons = [
+                        ['vk_round', '//vk.com'],
+                        ['github_round', '//github.com'],
+                        ['in_round', '#']
+                        ]
+                    each icon in icons
+                        li.socials__item
+                            a.socials__link(href=icon[1])
+                                svg.socials__icon
+                                    use(xlink:href=`assets/img/sprite.svg#${icon[0]}`)
+    .footer-bottom
+        .footer__text-left Я веб-разработчик из Санкт-Петербурга, и этот сайт
+            | я сделал в рамках обучения в Школе онлайн образования Loftschool.
+
+        .footer__text-right &copy; Лузан Андрей | создано с любовью в Loftschool | 2016
+

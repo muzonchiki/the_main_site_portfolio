@@ -1,0 +1,36 @@
+//colors
+$grey: #555b5e;
+$lightGrey: #9eaaab;
+$veryLightGrey: #c2d6d5;
+$greyForText: #b5b8b9;
+$greyForTitle: #d0d1d1;
+$specialWhite: #fffef9;
+$black: #373e42;
+$lightBlack: #455a64;
+$blue: #2aacab;
+$blue-bold: #0d9087;
+$fullScreenBlue: #0ab8a3;
+$beige: #f0efe9;
+$beigeForColumn: #eeebdf;
+
+
+//Layouts
+@import "layouts/layout";
+@import "layouts/fonts";
+
+
+//Pages
+@import "pages/about";
+@import "pages/works";
+@import "pages/blog";
+@import "pages/index";
+@import "pages/login";
+
+
+//Components
+@import "components/header";
+@import "components/footer";
+@import "components/socials";
+@import "components/fullScreen-menu";
+
+

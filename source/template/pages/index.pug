@@ -1,0 +1,47 @@
+extends ../_layoutBlog
+
+block title
+    - var title = "Страница приветствия"
+
+
+block content
+    .wrapper
+        .maincontent
+            .block__welcome
+                .welcome-bg__img
+                    img.welcome-bg__pic(src="assets/img/header/mountains_bg.png")
+
+                .autorized
+                    a.autorized__link(href="login.html") Авторизоваться
+
+                section.section__hero.section__hero-welcome
+                    .user__block
+                        .user__photo
+                            img.user__photo-pic(src="assets/img/header/avatar.jpg" alt="user photo")
+                        .user__name_welcome Андрей Лузан
+                        .user__desc_welcome Личный сайт веб-разработчика
+                        .socials.socials__welcome
+                            ul.socials__list
+                                -
+                                    icons = [
+                                    ['vk', '//vk.com'],
+                                    ['github', '//github.com'],
+                                    ['in', '//linkedin.com']
+                                    ]
+                                each icon in icons
+                                    li.socials__item
+                                        a.socials__link(href=icon[1])
+                                            svg.socials__icon
+                                                use(xlink:href=`assets/img/sprite.svg#${icon[0]}`)
+
+                    .welcome-buttons
+                        a.welcome-button.welcome-button__works(href="works.html") Мои работы
+                        a.welcome-button.welcome-button__about(href="about.html") Обо мне
+                        a.welcome-button.welcome-button__blog(href="blog.html") Блог
+
+
+                .bottom-text
+                    p &copy; Лузан Андрей | Создано с любовью в Loftschool | 2016
+
+
+

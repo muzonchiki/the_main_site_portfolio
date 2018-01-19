@@ -1,0 +1,371 @@
+.maincontent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+// works
+.works {
+  display: flex;
+  flex-direction: column;
+}
+
+.block__title {
+  display: flex;
+  flex-direction: column;
+  background: $specialWhite;
+}
+
+.triangles {
+  display: flex;
+}
+
+.triangle__left, .triangle__right {
+  width: 50%;
+  position: relative;
+}
+
+.works__triangle {
+  fill: $specialWhite;
+  display: block;
+  width: 100%;
+  height: 110px;
+  position: absolute;
+  bottom: 100%;
+}
+
+.works__triangle-left {
+  left: 0;
+}
+
+.works__triangle-right {
+  right: 0;
+}
+
+.title__works {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  text-align: center;
+  font-size: 63px;
+  &:after{
+    position: absolute;
+    top: 50%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+  }
+  &:before{
+    position: absolute;
+    top: 50%;
+    right: 62%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.works__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.block__works {
+  height: 750px;
+  display: flex;
+}
+
+.works__col {
+  width: 50%;
+  box-sizing: border-box;
+  &-left {
+    background: $beige;
+    position: relative;
+  }
+  &-right {
+    background: $beigeForColumn;
+  }
+}
+
+.col__left-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+  width: 70%;
+}
+
+.col__left-title {
+  font-size: 35px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: $lightBlack;
+  &:after{
+    position: absolute;
+    top: 28%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+  }
+  &:before{
+    position: absolute;
+    top: 28%;
+    right: 79%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.col__left-desc {
+  text-align: center;
+  border-top: 1px solid rgba(22, 194, 170, 0.3);
+  border-bottom: 1px solid rgba(22, 194, 170, 0.3);
+  padding: 15px;
+  color: $blue;
+  text-transform: uppercase;
+  font-family: 'robotomedium';
+  font-size: 16px;
+}
+
+.button__works {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background: $blue;
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  &:hover {
+    background: #14AC94;
+  }
+}
+
+.button__pic {
+  margin-right: 10px;
+}
+
+.button__name {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'robotoregular';
+}
+
+.col-right__top {
+  height: 70%;
+  padding: 20px 20px 40px 20px;
+  box-sizing: border-box;
+}
+
+.col-right__top_pic {
+  width: 100%;
+  height: 100%;
+  background: url("../img/works/work-1.png") center center no-repeat;
+}
+
+.col-right__bottom {
+  height: 30%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.col-right__bottom-left, .col-right__bottom-right {
+  width: 50%;
+}
+
+.col-right__bottom-left {
+  background: url("../img/works/work-2.png") center center no-repeat;
+}
+
+.col-right__bottom-right {
+  background: url("../img/works/work-4.png") center center no-repeat;
+}
+
+// reviews
+.reviews__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.block-reviews__title {
+  display: flex;
+  justify-content: center;
+}
+
+.reviews__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  margin-bottom: 40px;
+  font-size: 63px;
+  width: 400px;
+  text-align: center;
+  &:after{
+    position: absolute;
+    top: 27%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+  }
+  &:before{
+    position: absolute;
+    top: 27%;
+    right: 90%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.reviews {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.reviews__left, .reviews__right {
+  width: 30%;
+  height: 300px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.quotes__img {
+  margin-bottom: 30px;
+}
+
+
+
+.reviews__text {
+  margin-bottom: 20px;
+  line-height: 1.42;
+  font-family: 'robotoregular';
+  font-size: 16px;
+}
+
+.reviews__teacher {
+  display: flex;
+  align-items: center;
+}
+
+.reviews__teacher_pic {
+  width: 100px;
+  height: 100px;
+}
+
+.reviews__teacher_name {
+  margin-left: 15px;
+}
+
+.teacher__name {
+  margin-bottom: 10px;
+  color: $blue;
+  font-family: robotomedium;
+  font-size: 16px;
+}
+
+.teacher__desc {
+  color: $blue;
+  font-size: 14px;
+  font-family: robotoregular;
+}
+
+
+//.block-reviews__bg
+
+.block-reviews__bg {
+  height: 700px;
+  position: relative;
+  margin-top: 70px;
+}
+
+.reviews__bg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX( -50%);
+  width: 100%;
+}
+
+.reviews__bg-pic {
+  width: 100%;
+  height: 1000px;
+}
+
+// form
+.reviews__form {
+  width: 382px;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  background: rgba(255, 249, 251, 0.6);
+}
+
+.form__title {
+  font-size: 35px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: $lightBlack;
+  &:after{
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+  }
+  &:before{
+    position: absolute;
+    top: 50%;
+    right: 82%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.form__container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.form__input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: $lightBlack;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: 'robotolight';
+  font-size: 16px;
+}
+
+.form__input_area {
+  width: 90%;
+  height: 140px;
+  resize: none;
+}
+
+.works-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.works-form__button {
+  font-family: 'robotoregular';
+  font-size: 16px;
+  width: 50%;
+  text-decoration: none;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  background: rgb(20, 172, 140);
+  color: #fff;
+  &_send {
+    border-right: 1px solid #c4c4c4;
+  }
+  &:hover {
+    background: $blue;
+  }
+}

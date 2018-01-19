@@ -1,0 +1,153 @@
+extends ../_layoutBlog
+
+block title
+     - var title = "Обо мне"
+
+
+block content
+
+               include ../components/header
+
+
+               main.contentAbout
+
+                    div(class="about__column about__column-left")
+                        svg.about__triangle(viewBox="0 0 1000 110" preserveAspectRatio="none")
+                            polygon(points="0,0 0,110 1000,110")
+                        div(class="title about-title__col-left") обо мне
+                            .about__img
+                                img.about__pic(src="assets/img/header/about_header.png")
+                        .about__user-photo
+                            img.about__user-pic(src="assets/img/about/avatar__user.jpg")
+                        div(class="title title-text__col-left") кто я
+                        div(class="about__desc about__desc_col-left")
+                            |Я веб разработчик из Санкт-Петербурга, мне 27 лет,
+                            |я занимаюсь разработкой современных сайтов
+                            |и приложений. Мне нравится делать современные и
+                            |интересные проекты.
+                            br
+                            br
+                            |Этот сайт я сделал в рамках обучения в школе онлайн
+                            |образования "LOFTSCHOOL".Чуть позже я освежу в нем
+                            |свой контент а пока посмотрите как тут все
+                            |классно и красиво.
+
+
+
+                    div(class="about__column about__column-right")
+                        svg.about__triangle(viewBox="0 0 1000 110" preserveAspectRatio="none")
+                            polygon(points="0,110 1000,110 1000,0")
+                        div(class="title about-title__col-right") навыки
+                        .skills
+                            .skills__text Больше всего меня привлекает Frontend разработка,
+                                          | но я также знаком и могу решать не сложные задачи
+                                          | на Backend.Но давайте по порядку.
+                            ul.skills-group
+                                li.skills-group-item
+                                    .skills-group__title frontend
+                                    ul.skills-list
+                                        li.skills-list__item
+                                            .skill
+                                                svg.skill__circle.skill__circle--html
+                                                    circle(cx="50" cy="50" r="40").skill__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                                .skill__title Html 5
+                                        li.skills-list__item
+                                            .skill
+                                                svg.skill__circle.skill__circle--css
+                                                    circle(cx="50" cy="50" r="40").skill__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                                .skill__title Css3
+                                        li.skills-list__item
+                                            .skill
+                                                svg.skill__circle.skill__circle--js
+                                                    circle(cx="50" cy="50" r="40").skill__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                                .skill__title JavaScript & JQuery
+
+                                li.skills-group-item
+                                    .skills-group__title backend
+                                    ul.skills-list
+                                        li.skills-list__item
+                                            .skill
+                                                svg.skill__circle.skill__circle--php
+                                                    circle(cx="50" cy="50" r="40").skill__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                                .skill__title php
+                                        li.skills-list__item
+                                            .skill
+                                                svg.skill__circle
+                                                    circle(cx="50" cy="50" r="40").skill__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                                .skill__title mySQL
+                                        li.skills-list__item
+                                            .skill
+                                                svg.skill__circle.skill__circle--nodeJs
+                                                    circle(cx="50" cy="50" r="40").skill__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                                .skill__title Node.js & npm
+                                        li.skills-list__item
+                                            .skill
+                                                svg.skill__circle
+                                                    circle(cx="50" cy="50" r="40").skill__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                                .skill__title Mongo.db
+
+                                li.skills-group-item
+                                    .skills-group__title WorkFlow
+                                    ul.skills-list
+                                        li.skills-list__item
+                                            .skill
+                                                svg.skill__circle.skill__circle--git
+                                                    circle(cx="50" cy="50" r="40").skill__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                                .skill__title Git
+                                        li.skills-list__item
+                                            .skill
+                                                svg.skill__circle.skill__circle--gulp
+                                                    circle(cx="50" cy="50" r="40").skill__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                                .skill__title Gulp
+                                        li.skills-list__item
+                                            .skill
+                                                svg.skill__circle.skill__circle--webpack
+                                                    circle(cx="50" cy="50" r="40").skill__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                                .skill__title Webpack
+                                        li.skills-list__item
+                                            .skill
+                                                svg.skill__circle.skill__circle--yarn
+                                                    circle(cx="50" cy="50" r="40").skill__circle-under
+                                                    circle(cx="50" cy="50" r="40").skill__circle-above
+                                                .skill__title Yarn
+
+
+               .yandex-map#map
+                   .contacts__block
+                       .title.contacts__title контакты
+                       ul.contacts__list
+                           li.contacts__item
+                               a.contacts__link(href='#')
+                                img.social__link-pic(src='assets/img/icons/skype.svg')
+                                .social__link-name muzonchiki
+                           li.contacts__item
+                               a.contacts__link(href='mail: muzonchiki@yandex.ru')
+                                   img.social__link-pic(src='assets/img/icons/envelope.svg')
+                                   .social__link-name muzonchiki@yandex.ru
+                           li.contacts__item
+                               a.contacts__link(href='phone: +79819801776')
+                                   img.social__link-pic(src='assets/img/icons/phone.svg')
+                                   .social__link-name +79819801776
+                           li.contacts__item
+                               a.contacts__link(href='#')
+                                   img.social__link-pic(src='assets/img/icons/map_marker.svg')
+                                   .social__link-name ул.Латышских стрелков д.11 к.1
+               include ../components/footer
+
+
+
+
+
+
+
+

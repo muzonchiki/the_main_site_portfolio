@@ -1,0 +1,38 @@
+.header
+    .header__bg
+        img.header__bg-pic(src="assets/img/header/mountains_bg.png")
+    .header__portfolio-img
+        img.header__portfolio-img_pic(src="assets/img/header/portfolio_header.png")
+    .header__up
+        .socials
+            ul.socials__list
+                -
+                    icons = [
+                    ['vk', '//vk.com'],
+                    ['github', '//github.com'],
+                    ['in', '#']
+                    ]
+                each icon in icons
+                    li.socials__item
+                        a.socials__link(href=icon[1])
+                            svg.socials__icon
+                                use(xlink:href=`assets/img/sprite.svg#${icon[0]}`)
+        .hamburger
+            a.hamburger__link(href="#")
+                img.hamburger-pic(src="assets/img/header/hamburger.png")
+
+
+
+
+    section.section__hero
+        .user__block
+            .user__photo
+                img.user__photo-pic(src="assets/img/header/avatar.jpg" alt="user photo")
+            .user__name Андрей Лузан
+            .user__desc Личный сайт веб-разработчика
+
+    .arrow__down
+        img.arrow__down-pic(src="assets/img/icons/arrow_down.svg")
+
+
+

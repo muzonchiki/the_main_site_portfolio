@@ -1,0 +1,48 @@
+doctype html
+html(lang="RU-ru")
+    head
+        meta(charset="utf-8")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+
+        block title
+        title #{title}
+
+
+        link(rel='stylesheet' href='/assets/css/foundation.css')
+        link(rel='stylesheet' href='/assets/css/app.css')
+
+        script(src='/assets/js/foundation.js' defer)
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script(src='/assets/js/app.js' defer)
+
+
+
+
+
+    body
+        .wrapper
+            .maincontent
+                .fullScreen-menu
+                    .fullScreen-menu__img-cross
+                        a.img-cross(href='#')
+                            svg.fullScreen-menu__pic-cross
+                                use(xlink:href='assets/img/sprite.svg#rounded-rectangle_1')
+                                use(xlink:href='assets/img/sprite.svg#rounded-rectangle_2')
+                    ul.fullScreen-menu__list
+                        li.fullScreen-menu__item
+                            a.fullScreen-menu__link(href='works.html') мои работы
+                        li.fullScreen-menu__item
+                            a.fullScreen-menu__link(href='blog.html') блог
+                        li.fullScreen-menu__item
+                            a.fullScreen-menu__link(href='about.html') обо мне
+                        li.fullScreen-menu__item
+                            a.fullScreen-menu__link(href='login.html') авторизация
+                block content
+
+
+
+
+
+
+
